@@ -1,0 +1,72 @@
+:root{
+	--background: #0d0d0d;
+	--text-color: #f8f8f8;
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: var(--background);
+	padding: 0px 10px;
+	color: var(--text-color);
+}
+div#titlebar{
+	background-color: var(--background);
+	display: flex;
+	height: 30px;
+	align-items: center;
+	justify-content: space-between;
+	-webkit-user-select: none;
+	-webkit-app-region: drag;
+}
+div#titlebar span{
+	color: var(--text-color);
+	user-select: none;
+	font-family: sans-serif;
+	letter-spacing: 0.5px;
+	text-align: center;
+	background-color: var(--background);
+	width: 100%;
+}
+ul#buttons{
+	display: flex;
+	gap: 8px;
+	height: 100%;
+	align-items: center;
+	background-color: var(--background);
+	list-style: none;
+	justify-content: center;
+	-webkit-app-region: no-drag;
+}
+li#close{
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #f73620;
+	-webkit-app-region: no-drag; 
+	user-select: none;
+	cursor: pointer;
+}
+
+li#minimize{
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #f7b21e;
+	-webkit-app-region: no-drag;
+	cursor: pointer;
+}
+li#maximize{
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #3fb50d;
+	-webkit-app-region: no-drag;
+	cursor: pointer;
+}
+

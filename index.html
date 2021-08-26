@@ -2,12 +2,21 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+   	<link href="./css/style.css"  rel="stylesheet"/>
+    
   </head>
   <body>
+  	<!--title bar-->
+  	<div id="titlebar">
+  	<ul id="buttons">
+		<li id="close"></li>
+		<li id="minimize"></li>
+		<li id="maximize"></li>
+  	</ul>
+  	<span>title</span>
+  	</div>
     <h1>film</h1>
+    <script src="./js/index.js"></script>
   </body>
 </html>
