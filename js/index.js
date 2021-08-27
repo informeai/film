@@ -1,21 +1,37 @@
 const {ipcRenderer} = require('electron')
 
-let pathVideo = "/Users/wellingtongadelha/Movies/capitao_america_1.mp4"
+window.onload = function(){
+	let inputFile = document.getElementById("filePath")
+	let search = document.getElementById("search")
+	let title = document.getElementById("title")
+	const btnClose = document.getElementById("close")
+	const btnMinimize = document.getElementById("minimize")
+	const btnMaximize = document.getElementById("maximize")
+	const video = document.querySelector("video")
 
-const btnClose = document.getElementById("close")
-const btnMinimize = document.getElementById("minimize")
-const btnMaximize = document.getElementById("maximize")
-const video = document.querySelector("video")
-video.setAttribute("src",pathVideo)
+	search.addEventListener("click",(e)=>{
+		inputFile.click()
+			
+	})
 
-btnClose.addEventListener("click",(e)=>{
-	ipcRenderer.send("renderer-close")
-})
+	inputFile.addEventListener("change",(e)=>{
+		title.innerHTML = e.target.files[0].name
+		video.src = e.target.files[0].path
+					
+	})
+	
+	
+	
+	btnClose.addEventListener("click",(e)=>{
+		ipcRenderer.send("renderer-close")
+	})
+	
+	btnMinimize.addEventListener("click",(e)=>{
+		ipcRenderer.send("renderer-minimize")
+	})
+	
+	btnMaximize.addEventListener("click",(e)=>{
+		ipcRenderer.send("renderer-maximize")
+	})
+}
 
-btnMinimize.addEventListener("click",(e)=>{
-	ipcRenderer.send("renderer-minimize")
-})
-
-btnMaximize.addEventListener("click",(e)=>{
-	ipcRenderer.send("renderer-maximize")
-})
