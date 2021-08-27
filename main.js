@@ -2,7 +2,7 @@ const { app, ipcMain, BrowserWindow } = require('electron')
 var win;
 function createWindow () {
   win = new BrowserWindow({
-    width: 1200,
+    width: 1300,
     height: 800,
     frame: false,
     backgroundColor: "#0d0d0d",
