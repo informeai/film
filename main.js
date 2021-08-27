@@ -9,12 +9,11 @@ function createWindow () {
     webPreferences: {
     	nodeIntegration: true,
     	contextIsolation: false,
-    	devTools: true,
     }
   })
 
   win.loadFile('index.html')
-  win.webContents.openDevTools()
+  // win.webContents.openDevTools()
 }
 
 
